@@ -6,7 +6,7 @@ echo Hello World
 
 # Escape Sequence Characters will be considered by echo command only if we enable it by using the -e option 
 
-# \n : New Line 
+# \n : New Line
 # \t : Tab Space
 
 echo Line1\nLine2
