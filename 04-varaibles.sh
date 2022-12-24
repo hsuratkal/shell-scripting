@@ -7,6 +7,8 @@
 a=10 
 b=20
 c=30 
+d=100
+# JUNK_FOLDER_NAME=xyz
 
 # How to print the value of a variable 
 
@@ -22,3 +24,8 @@ echo "Printing value of c : $c"
 echo "Printing the value of d : $d"
 
 # $a or ${a} both of them are same
+
+# If you don't declare a value and if you try to print it, it's going to consider that value as null.
+
+# echo "Deleting the junk directory : "
+# rm -rf /data/${JUNK_FOLDER_NAME}   --->  rm -rf /data/ 
