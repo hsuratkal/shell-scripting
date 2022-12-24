@@ -8,6 +8,13 @@
 
 # $0       : Prints the script name 
 # $?       : Shows the exit code of the previos command  
-# $0 to $9 : command line variables 
+# $1 to $9 : command line variables ; ex : sh test.sh  100 200 300 
+
+a=$1 
+b=$2 
+
+# ex :  sh test.sh  100   200 
 
 echo "Name of the script is : $0 "
+echo "Value of a is : $a "
+echo "Value of b is : $b "
