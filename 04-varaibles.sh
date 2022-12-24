@@ -18,4 +18,7 @@ echo a
 echo value of a is $a 
 echo value of a is ${a} 
 
+echo "Printing value of c : $c" 
+echo "Printing the value of d : $d"
+
 # $a or ${a} both of them are same
