@@ -6,7 +6,7 @@
 # Apart from the shebang notation, anything that starts with `#` is referred as a comment and is not executed by the script
 # Comments are just for hte human readable purpose only.
 
-echo "Hello World"
+echo Hello World
 
 echo Line1 
 echo Line2
