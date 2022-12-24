@@ -14,4 +14,4 @@ echo a
 
 # $a : telling system to print the value of a
 
-echo $a 
+echo value of a is $a 
