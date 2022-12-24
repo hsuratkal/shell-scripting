@@ -11,9 +11,6 @@ d=100
 # JUNK_FOLDER_NAME=xyz
 
 # How to print the value of a variable 
-
-
-
 echo a 
 
 # $a : telling system to print the value of a
@@ -26,7 +23,6 @@ echo "Printing value of c : $c"
 echo "Printing the value of d : $d"
 
 d=200
-
 echo "Printing the value of d : $d"
 
 # $a or ${a} both of them are same
