@@ -2,11 +2,11 @@
 
 # Declaring a sample function 
 # ( paranthesis )
-# sample() {
-#     echo "I am a sample function"
-#     echo " If you want to me call me, just type sample"
-#     echo "sample function is completed"
-# }
+sample() {
+    echo "I am a sample function"
+    echo " If you want to me call me, just type sample"
+    echo "sample function is completed"
+}
 
 # # calling the function
 # sample 
@@ -18,8 +18,10 @@ stat() {
 
     echo "Load Average on the system in last 1 minute: $(uptime | awk -F : '{print $NF}' | awk -F , '{print $1}')"
 
-    echo -e "\e[31m _____I am done; function completed_______ \e[0m"
+    echo -e "\e[31m _____stat function completed_______ \e[0m"
+    
+  #  calling another function
+     echo -e "\e[32m _____calling sample function_______ \e[0m"
+    sample 
 }
 
-echo "Calling stat funciton"
-stat 
