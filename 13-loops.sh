@@ -12,8 +12,8 @@ done
 
 # while loop : a conditional loop   
 
-i=0
-while [ $i -lt 10 ]; do
-  echo I = $i
-  i=$(($i+1))
+val=0
+while [ $val -lt 10 ]; do
+  echo I = $val
+  i=$(($val+1))
 done
