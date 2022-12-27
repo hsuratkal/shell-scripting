@@ -26,15 +26,15 @@
 c=$1 
 
 if [ "$c" -eq "10" ] ; then  
-    echo " value is c 10"
+    echo "value is c 10"
 
 elif [ "$c" -eq "20" ] ; then  
     echo " value is c 30"
 
 elif [ "$c" -eq "30" ] ; then  
-    echo " value is c 30"
+    echo "value is c 30"
 
 else  
     echo "value is not 10 or 20 or 30" 
-
+    exit 100 
 fi 
