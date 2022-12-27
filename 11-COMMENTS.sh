@@ -5,3 +5,4 @@ echo "DevOps Project Oriented training"
 a=10 
 echo $a
 COMMENT
+echo "Demo on multi line comments"
