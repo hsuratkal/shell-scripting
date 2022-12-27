@@ -5,6 +5,8 @@
 #    opt2)  commands2 ;;  
 # esac 
 
+ACTION=$1 
+
 case $ACTION in   
     start) 
         echo "XYZ Service is starting"
