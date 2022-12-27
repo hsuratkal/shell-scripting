@@ -12,8 +12,8 @@ done
 
 # while loop : a conditional loop   
 
-i=10 
-while [ $i -lt 0 ] ; do 
-    echo "Iteration Numbre is $i"
-    i=$(($i+i)) 
+i=0
+while [ $i -lt 10 ]; do
+  echo I = $i
+  i=$(($i+1))
 done
