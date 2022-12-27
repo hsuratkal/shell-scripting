@@ -1,6 +1,6 @@
 #!/bin/bash 
 
-a="xyz"
+a="ABC"
 
 # If Condition
 # if [ "$a" == "xyz" ]; then 
