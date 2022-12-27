@@ -13,8 +13,7 @@ done
 # while loop : a conditional loop   
 
 i=10 
-while  [ $i -gt 0 ] ;do 
+while [ $i -gt 0 ] ; do 
     echo "Iteration Numbre is $i"
     i=$i-1 
-
 done
