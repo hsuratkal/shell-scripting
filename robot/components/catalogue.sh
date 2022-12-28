@@ -2,7 +2,8 @@
 set -e
 
 COMPONENT=catalogue 
-
+ls -ltr
+pwd 
 source robot/components/common.sh    # Source loads a file and this file has all the common patterns.
 cat common.sh 
 
