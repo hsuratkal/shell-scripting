@@ -4,5 +4,5 @@ frontend:
 mongodb:
 	bash components/mongodb.sh 
 
-cataloguee:
+catalogue
 	bash components/catalogue.sh 
