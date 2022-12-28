@@ -30,12 +30,12 @@ echo -n "Copying $COMPONENT :"
 mv frontend-main/* .   &>> "${LOFGILE}"
 mv static/* .          &>> "${LOFGILE}"
 rm -rf frontend-main README.md  &>> /tmp/frontend.log 
-mv localhost.conf /etc/nginx/default.d/roboshop.conf  &>>  $LOFGILE
+mv localhost.conf /etc/nginx/default.d/roboshop.conf   &>> "${LOFGILE}"
 stat $? 
 
 echo -n "Retarting Nignx :"
-systemctl enable nginx   &>>  $LOFGILE
-systemctl restart nginx  &>>  $LOFGILE
+systemctl enable nginx    &>> "${LOFGILE}"
+systemctl restart nginx   &>> "${LOFGILE}"
 stat $?
 
 echo -e "\e[32m ______ $COMPONENT Configuration Completed _________ \e[0m"
