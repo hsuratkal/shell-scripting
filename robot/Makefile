@@ -6,3 +6,4 @@ catalogue:
 
 mongodb:
 	bash components/mongodb.sh
+
