@@ -1,7 +1,8 @@
 #!/bin/bash 
 set -e
 
-COMPONENT=catalogue 
+COMPONENT=catalogue
+LOFGILE=/tmp/$COMPONENT.log
 
 source components/common.sh    # Source loads a file and this file has all the common patterns.
 
