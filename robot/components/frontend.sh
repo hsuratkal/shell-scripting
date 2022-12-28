@@ -1,7 +1,5 @@
 #!/bin/bash 
 
-set -e
-
 COMPONENT=frontend
 source components/common.sh    # Source loads a file and this file has all the common patterns.
 
