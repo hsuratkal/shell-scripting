@@ -3,7 +3,7 @@
 set -e
 
 COMPONENT=frontend
-LOFGILE="/tmp/$COMPONENT.log"
+
 
 source components/common.sh    # Source loads a file and this file has all the common patterns.
 

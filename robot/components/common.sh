@@ -1,4 +1,5 @@
 APPUSER=roboshop
+LOFGILE="/tmp/$COMPONENT.log"
 
 ID=$(id -u)
 if [ $ID -ne 0 ] ; then 
