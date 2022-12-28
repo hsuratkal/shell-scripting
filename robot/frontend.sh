@@ -33,17 +33,17 @@ rm -rf *   &>> /tmp/frontend.log
 stat $? 
 
 echo -n "Extracting $COMPONENT : "
-unzip /tmp/COMPONENT.zip &>> /tmp/frontend.log 
+unzip /tmp/$COMPONENT.zip &>> /tmp/$COMPONENT.log 
 stat $? 
 
 echo -n "Copying $COMPONENT :"
 mv frontend-main/* .  &>> /tmp/frontend.log 
 mv static/* .         &>> /tmp/frontend.log 
 rm -rf frontend-main README.md  &>> /tmp/frontend.log 
-mv localhost.conf /etc/nginx/default.d/roboshop.conf  &>> /tmp/frontend.log 
+mv localhost.conf /etc/nginx/default.d/roboshop.conf  &>> /tmp/$COMPONENT.log 
 stat $? 
 
 echo -n "Retarting Nignx :"
-systemctl enable nginx  &>> /tmp/frontend.log 
-systemctl restart nginx   &>> /tmp/frontend.log 
+systemctl enable nginx  &>> /tmp/$COMPONENT.log 
+systemctl restart nginx   &>> /tmp/$COMPONENT.log 
 stat $?
