@@ -22,12 +22,12 @@ stat $?
 
 echo -n "Extracting the $COMPONENT Schema file:"
 cd /tmp
-unzip -o mongodb.zip  &>> $LOFGILE
+unzip -o mongodb.zip   &>> "${LOFGILE}"
 stat $? 
 
 echo -n "Injecting the Schema : "
 cd mongodb-main
-mongo < catalogue.js &>> $LOFGILE
-mongo < users.js     &>> $LOFGILE
+mongo < catalogue.js  &>> "${LOFGILE}"
+mongo < users.js      &>> "${LOFGILE}"
 stat $? 
 
