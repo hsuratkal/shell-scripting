@@ -3,6 +3,7 @@
 set -e
 
 COMPONENT=frontend
+LOFGILE=/tmp/$COMPONENT.log
 
 ID=$(id -u)
 if [ $ID -ne 0 ] ; then 
@@ -18,8 +19,11 @@ stat() {
     fi 
 }
 
+echo -n "\e[32m ______ $COMPONENT Configuration is Starting  _________ \e[0m"
+
+
 echo -n "Installing Nginx :"
-yum install nginx -y    &>> /tmp/$COMPONENT.log 
+yum install nginx -y    &>>  $LOFGILE
 stat $? 
 
 echo -n "Downloading the $COMPONENT :"
@@ -28,7 +32,7 @@ stat $?
 
 echo -n "Clearing the default content : "
 cd /usr/share/nginx/html
-rm -rf *   &>> /tmp/frontend.log 
+rm -rf *   &>>  $LOFGILE
 stat $? 
 
 echo -n "Extracting $COMPONENT : "
@@ -36,13 +40,15 @@ unzip /tmp/$COMPONENT.zip &>> /tmp/$COMPONENT.log
 stat $? 
 
 echo -n "Copying $COMPONENT :"
-mv frontend-main/* .  &>> /tmp/frontend.log 
-mv static/* .         &>> /tmp/frontend.log 
+mv frontend-main/* .  &>>  $LOFGILE
+mv static/* .         &>>  $LOFGILE 
 rm -rf frontend-main README.md  &>> /tmp/frontend.log 
-mv localhost.conf /etc/nginx/default.d/roboshop.conf  &>> /tmp/$COMPONENT.log 
+mv localhost.conf /etc/nginx/default.d/roboshop.conf  &>>  $LOFGILE
 stat $? 
 
 echo -n "Retarting Nignx :"
-systemctl enable nginx  &>> /tmp/$COMPONENT.log 
-systemctl restart nginx   &>> /tmp/$COMPONENT.log 
+systemctl enable nginx   &>>  $LOFGILE
+systemctl restart nginx  &>>  $LOFGILE
 stat $?
+
+echo -n "\e[32m ______ $COMPONENT Configuration Completed _________ \e[0m"
