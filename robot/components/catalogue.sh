@@ -1,4 +1,5 @@
 #!/bin/bash 
+set -e 
 
 COMPONENT=catalogue
 LOFGILE=/tmp/$COMPONENT
