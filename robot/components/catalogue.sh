@@ -3,7 +3,7 @@ set -e
 
 COMPONENT=catalogue 
 
-source components/common.sh    # Source loads a file and this file has all the common patterns.
+source robot/components/common.sh    # Source loads a file and this file has all the common patterns.
 cat common.sh 
 
 echo -n "Configuring NodeJS Repo :"
