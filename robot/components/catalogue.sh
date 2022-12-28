@@ -12,7 +12,7 @@ stat $?
 echo -n "Configuring NodeJS Repo :"
 
 echo -n "Creating Application User $APPUSER"
-useradd $APPUSER  &>>${LOGFILE}
+useradd $APPUSER  >> ${LOGFILE}
 stat $? 
 
 
