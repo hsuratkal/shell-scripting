@@ -19,16 +19,16 @@ stat $?
 
 echo -n "Clearing the default content : "
 cd /usr/share/nginx/html
-rm -rf *   &>>  $LOFGILE
+rm -rf *    &>> "${LOFGILE}"
 stat $? 
 
 echo -n "Extracting $COMPONENT : "
-unzip /tmp/$COMPONENT.zip  &>>${LOGFILE} 
+unzip /tmp/$COMPONENT.zip  &>> "${LOFGILE}"
 stat $? 
 
 echo -n "Copying $COMPONENT :"
-mv frontend-main/* .  &>>  $LOFGILE
-mv static/* .         &>>  $LOFGILE 
+mv frontend-main/* .   &>> "${LOFGILE}"
+mv static/* .          &>> "${LOFGILE}"
 rm -rf frontend-main README.md  &>> /tmp/frontend.log 
 mv localhost.conf /etc/nginx/default.d/roboshop.conf  &>>  $LOFGILE
 stat $? 
