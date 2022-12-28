@@ -4,5 +4,5 @@ frontend:
 mongodb:
 	bash mongodb.sh 
 
-catalog:
+catalogue:
 	bash catalogue.sh 
