@@ -9,7 +9,7 @@ curl -s -o /etc/yum.repos.d/mongodb.repo https://raw.githubusercontent.com/stans
 stat $? 
 
 echo -n "Installing $COMPONENT : "
-yum install -y mongodb-org  &>> $LOFGILE
+yum install -y mongodb-org   &>> "${LOFGILE}"
 
 echo -n "Starting $COMPONENT : "
 systemctl enable mongod
