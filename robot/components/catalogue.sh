@@ -1,9 +1,8 @@
 #!/bin/bash 
 set -e
 
-COMPONENT=components/catalogue 
+COMPONENT=catalogue 
 
-cat common.sh 
 source common.sh    # Source loads a file and this file has all the common patterns.
 
 
