@@ -1,7 +1,7 @@
 #!/bin/bash 
 set -e
 
-COMPONENT=mongodb
+COMPONENT=components/mongodb
 
 source common.sh    # Source loads a file and this file has all the common patterns.
 
