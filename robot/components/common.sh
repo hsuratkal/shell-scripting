@@ -1,4 +1,3 @@
-LOFGILE=/tmp/$COMPONENT.log
 APPUSER=roboshop
 
 ID=$(id -u)
