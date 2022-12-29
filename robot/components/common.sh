@@ -14,3 +14,7 @@ stat() {
         echo -e "\e[31m failure \e[0m"
     fi 
 }
+
+NODEJS() {
+    
+}
