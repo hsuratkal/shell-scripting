@@ -3,6 +3,8 @@
 COMPONENT=user
 source components/common.sh    # Source loads a file and this file has all the common patterns.
 
+NODEJS                         # Calling NodeJS Function
+
 echo -n "Configuring Node JS:"
 curl -sL https://rpm.nodesource.com/setup_16.x | bash  &>> "${LOFGILE}"
 stat $? 
