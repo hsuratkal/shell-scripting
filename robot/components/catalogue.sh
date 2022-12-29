@@ -16,7 +16,7 @@ curl -s -L -o /tmp/catalogue.zip "https://github.com/stans-robot-project/catalog
 stat $? 
 
 echo -n "Extracting the $COMPONNET: "
-cd home
+cd /home/$APPUSER
 
 
 
