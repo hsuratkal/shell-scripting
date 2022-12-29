@@ -18,7 +18,7 @@ sed -i -e  's/127.0.0.1/0.0.0.0/' /etc/redis/redis.conf
 stat $?
 
 echo -n "Starting $COMPONENT : "
-
+systemctl daemon-reload 
 systemctl enable $COMPONENT &>> "${LOFGILE}"
-systemctl start  $COMPONENT &>> "${LOFGILE}"
+systemctl restart  $COMPONENT &>> "${LOFGILE}"
 stat $? 
