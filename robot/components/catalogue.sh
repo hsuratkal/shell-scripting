@@ -39,3 +39,4 @@ npm install  &>> "${LOFGILE}"
 stat $? 
 
 echo -n "Configuring the $COMPONENT Service:"
+mongodb.roboshop.internal
