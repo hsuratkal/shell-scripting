@@ -8,7 +8,8 @@ curl -sL https://rpm.nodesource.com/setup_16.x | bash  &>> "${LOFGILE}"
 stat $? 
 
 echo -n "Installing nodeJs : "
-yum install nodejs -y
+yum install nodejs -y &>> "${LOFGILE}"
+stat $? 
 
 id $APPUSER &>> "${LOFGILE}" 
 if [ $? -ne 0 ] ; then 
