@@ -5,20 +5,6 @@ source components/common.sh    # Source loads a file and this file has all the c
 
 NODEJS                         # Calling NodeJS Function
 
-echo -n "Configuring Node JS:"
-curl -sL https://rpm.nodesource.com/setup_16.x | bash  &>> "${LOFGILE}"
-stat $? 
-
-echo -n "Installing nodeJs : "
-yum install nodejs -y &>> "${LOFGILE}"
-stat $? 
-
-id $APPUSER &>> "${LOFGILE}" 
-if [ $? -ne 0 ] ; then 
-    echo -n "Creating Application User $APPUSER :"
-    useradd $APPUSER  &>> "${LOFGILE}"
-    stat $? 
-fi 
 
 echo -n "Downloading the $COMPONENT :" 
 curl -s -L -o /tmp/${COMPONENT}.zip "https://github.com/stans-robot-project/$COMPONENT/archive/main.zip"
