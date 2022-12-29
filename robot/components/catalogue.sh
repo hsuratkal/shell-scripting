@@ -11,4 +11,5 @@ echo -n "Creating Application User $APPUSER"
 useradd $APPUSER  &>> "${LOFGILE}"
 stat $? 
 
+echo -n "Downloading the $COMPONENT :" 
 
