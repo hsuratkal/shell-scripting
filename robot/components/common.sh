@@ -29,6 +29,8 @@ NODEJS() {
     DOWNLOAD_AND_EXTRACT    # Calling DOWNLOAD_AND_EXTRACT function to download and extract the component 
 
     NPM_INSTALL             # Calling NPM Install 
+
+    CONFIGURE_SVC      
 }
 
 CREATE_USER() {
