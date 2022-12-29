@@ -17,7 +17,7 @@ stat $?
 
 echo -n "Extracting the $COMPONNET: "
 cd /home/$APPUSER
-unzip /tmp/COMPONNET.zip  &>> "${LOFGILE}"
+unzip -o /tmp/$COMPONNET.zip  &>> "${LOFGILE}"
 
 
 
