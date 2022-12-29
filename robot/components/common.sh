@@ -26,7 +26,7 @@ NODEJS() {
 
     CREATE_USER             # Calling Create_User function to create user account
 
-    DOWNLOAD_AND_EXTRACT    # Calling DOWNLOAD_AND_EXTRACT function to create user account
+    DOWNLOAD_AND_EXTRACT    # Calling DOWNLOAD_AND_EXTRACT function to download
 }
 
 CREATE_USER() {
