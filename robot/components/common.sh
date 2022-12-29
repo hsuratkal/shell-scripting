@@ -24,3 +24,12 @@ NODEJS() {
     yum install nodejs -y &>> "${LOFGILE}"
     stat $?  
 }
+
+CREATE_USER() {
+    id $APPUSER &>> "${LOFGILE}" 
+    if [ $? -ne 0 ] ; then 
+        echo -n "Creating Application User $APPUSER :"
+        useradd $APPUSER  &>> "${LOFGILE}"
+        stat $? 
+    fi 
+}
