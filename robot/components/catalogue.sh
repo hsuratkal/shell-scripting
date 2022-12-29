@@ -39,5 +39,5 @@ npm install  &>> "${LOFGILE}"
 stat $? 
 
 echo -n "Configuring the $COMPONENT Service:"
-sed -i -e  's/MONGO_DNSNAME/mongodb.roboshop.internal/' /etc/mongod.conf
+sed -i -e  's/MONGO_DNSNAME/mongodb.roboshop.internal/' /home/$APPUSER/$COMPONET/
  
