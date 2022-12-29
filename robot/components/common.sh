@@ -56,3 +56,5 @@ DOWNLOAD_AND_EXTRACT() {
     chown -R $APPUSER:$APPUSER /home/$APPUSER/$COMPONENT
     stat $?
 }
+
+NPM_INSTALL() {}
