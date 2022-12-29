@@ -3,13 +3,8 @@
 COMPONENT=cart
 source components/common.sh    # Source loads a file and this file has all the common patterns.
 
-echo -n "Configuring Node JS:"
-curl -sL https://rpm.nodesource.com/setup_16.x | bash  &>> "${LOFGILE}"
-stat $? 
+NODEJS                         # Calling NodeJS Function
 
-echo -n "Installing nodeJs : "
-yum install nodejs -y &>> "${LOFGILE}"
-stat $? 
 
 id $APPUSER &>> "${LOFGILE}" 
 if [ $? -ne 0 ] ; then 
