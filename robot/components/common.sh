@@ -16,5 +16,11 @@ stat() {
 }
 
 NODEJS() {
-    
+    echo -n "Configuring Node JS:"
+    curl -sL https://rpm.nodesource.com/setup_16.x | bash  &>> "${LOFGILE}"
+    stat $? 
+
+    echo -n "Installing nodeJs : "
+    yum install nodejs -y &>> "${LOFGILE}"
+    stat $?  
 }
