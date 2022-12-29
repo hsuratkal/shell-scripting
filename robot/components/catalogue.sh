@@ -24,7 +24,7 @@ unzip -o /tmp/$COMPONENT.zip  &>> "${LOFGILE}"
 stat $? 
 
 echo -n "Performing cleanup : "
-
+rm -rf /home/$APPUSER/$COMPONENT/
 
 echo -n "Changing the ownership to $APPUSER"
 mv /home/$APPUSER/$COMPONENT-main /home/$APPUSER/$COMPONENT
