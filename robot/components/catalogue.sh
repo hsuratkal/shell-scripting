@@ -46,4 +46,5 @@ stat $?
 echo -n "Starting $COMPONENT Service :"
 systemctl daemon-reload &>> "${LOFGILE}"
 systemctl restart catalogue
+systemctl enable catalogue
  
