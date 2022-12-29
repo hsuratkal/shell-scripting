@@ -31,4 +31,5 @@ stat $?
 
 echo -n "Installing $COMPONENT Dependencies :"
 cd $COMPONENT 
-npm install 
+npm install  &>> "${LOFGILE}" 
+stat $? 
