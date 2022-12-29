@@ -49,4 +49,4 @@ systemctl enable catalogue &>> "${LOFGILE}"
 systemctl restart catalogue &>> "${LOFGILE}"
 stat $? 
 
- 
+ echo -e "\e[32m ______ $COMPONENT Configuration Completed _________ \e[0m"
