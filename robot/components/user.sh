@@ -6,25 +6,6 @@ source components/common.sh    # Source loads a file and this file has all the c
 NODEJS                         # Calling NodeJS Function
 
 
-echo -n "Downloading the $COMPONENT :" 
-curl -s -L -o /tmp/${COMPONENT}.zip "https://github.com/stans-robot-project/$COMPONENT/archive/main.zip"
-stat $? 
-
-echo -n "Cleanup and Extraction $COMPONENT: "
-rm -rf /home/${APPUSER}/${COMPONENT}/
-cd /home/$APPUSER
-unzip -o /tmp/${COMPONENT}.zip  &>> "${LOFGILE}"
-stat $? 
-
-echo -n "Changing the ownership to $APPUSER"
-mv /home/$APPUSER/$COMPONENT-main /home/$APPUSER/$COMPONENT
-chown -R $APPUSER:$APPUSER /home/$APPUSER/$COMPONENT
-stat $?
-
-echo -n "Installing $COMPONENT Dependencies :"
-cd $COMPONENT 
-npm install  &>> "${LOFGILE}" 
-stat $? 
 
 echo -n "Configuring the $COMPONENT Service:"
 sed -i -e 's/REDIS_ENDPOINT/redis.roboshop.internal/' -e 's/MONGO_ENDPOINT/mongo.roboshop.internal/' /home/$APPUSER/$COMPONENT/systemd.service
