@@ -7,6 +7,9 @@ echo -n "Configuring Node JS:"
 curl -sL https://rpm.nodesource.com/setup_16.x | bash  &>> "${LOFGILE}"
 stat $? 
 
+echo -n "Installing nodeJs : "
+yum install nodejs -y
+
 id $APPUSER &>> "${LOFGILE}" 
 if [ $? -ne 0 ] ; then 
     echo -n "Creating Application User $APPUSER :"
