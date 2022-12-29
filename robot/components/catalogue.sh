@@ -30,4 +30,5 @@ chown -R $APPUSER:$APPUSER /home/$APPUSER/$COMPONENT
 stat $?
 
 echo -n "Installing $COMPONENT Dependencies :"
-cd 
+cd $COMPONENT 
+
