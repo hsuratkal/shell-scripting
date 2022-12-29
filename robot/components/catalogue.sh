@@ -44,5 +44,6 @@ mv /home/$APPUSER/$COMPONET/systemd.service  /etc/systemd/system/$COMPONENT.serv
 stat $? 
 
 echo -n "Starting $COMPONENT Service :"
-systemctl daemon-reload 
+systemctl daemon-reload &>> "${LOFGILE}"
+
  
