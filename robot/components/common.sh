@@ -28,7 +28,7 @@ NODEJS() {
 
     DOWNLOAD_AND_EXTRACT    # Calling DOWNLOAD_AND_EXTRACT function to download and extract the component 
 
-    NPM INSTALL 
+    NPM_INSTALL 
 }
 
 CREATE_USER() {
