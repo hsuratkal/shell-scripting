@@ -7,7 +7,7 @@ NODEJS                         # Calling NodeJS Function
 
 
 echo -n "Configuring the $COMPONENT Service:"
-sed -i -e 's/REDIS_ENDPOINT/redis.roboshop.internal/' -e 's/CATALOGUE_ENDPOINT/catalogue.roboshop.internal/' /home/$APPUSER/$COMPONENT/systemd.service
+sed -i  /home/$APPUSER/$COMPONENT/systemd.service
 mv /home/$APPUSER/$COMPONENT/systemd.service  /etc/systemd/system/$COMPONENT.service 
 stat $? 
 
