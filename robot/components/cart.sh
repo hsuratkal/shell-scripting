@@ -6,17 +6,6 @@ source components/common.sh    # Source loads a file and this file has all the c
 NODEJS                         # Calling NodeJS Function
 
 
-id $APPUSER &>> "${LOFGILE}" 
-if [ $? -ne 0 ] ; then 
-    echo -n "Creating Application User $APPUSER :"
-    useradd $APPUSER  &>> "${LOFGILE}"
-    stat $? 
-fi 
-
-echo -n "Downloading the $COMPONENT :" 
-curl -s -L -o /tmp/${COMPONENT}.zip "https://github.com/stans-robot-project/$COMPONENT/archive/main.zip"
-stat $? 
-
 echo -n "Cleanup and Extraction $COMPONENT: "
 rm -rf /home/${APPUSER}/${COMPONENT}/
 cd /home/$APPUSER
