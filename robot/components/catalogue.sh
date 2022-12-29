@@ -10,10 +10,7 @@ NODEJS                         # Calling NodeJS Function
 
 
 
-echo -n "Installing $COMPONENT Dependencies :"
-cd $COMPONENT 
-npm install  &>> "${LOFGILE}" 
-stat $? 
+
 
 echo -n "Configuring the $COMPONENT Service:"
 sed -i -e  's/MONGO_DNSNAME/mongodb.roboshop.internal/' /home/$APPUSER/$COMPONENT/systemd.service
