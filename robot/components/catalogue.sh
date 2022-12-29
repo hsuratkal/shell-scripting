@@ -23,5 +23,6 @@ cd /home/$APPUSER
 unzip -o /tmp/$COMPONENT.zip  &>> "${LOFGILE}"
 stat $? 
 
-echo -n 
+echo -n "Changing the ownership to $APPUSER"
+chown $APPUSER:$APPUSER /home/
 
