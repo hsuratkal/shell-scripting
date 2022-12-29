@@ -19,7 +19,7 @@ rm -rf *    &>> "${LOFGILE}"
 stat $? 
 
 echo -n "Extracting $COMPONENT : "
-unzip /tmp/$COMPONENT.zip  &>> "${LOFGILE}"
+unzip -o /tmp/$COMPONENT.zip  &>> "${LOFGILE}"
 stat $? 
 
 echo -n "Copying $COMPONENT :"
