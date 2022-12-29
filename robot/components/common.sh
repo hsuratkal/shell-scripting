@@ -28,10 +28,10 @@ NODEJS() {
 
     DOWNLOAD_AND_EXTRACT    # Calling DOWNLOAD_AND_EXTRACT function to download and extract the component 
 
-echo -n "Installing $COMPONENT Dependencies :"
-cd $COMPONENT 
-npm install  &>> "${LOFGILE}" 
-stat $? 
+    echo -n "Installing $COMPONENT Dependencies :"
+    cd $COMPONENT 
+    npm install  &>> "${LOFGILE}" 
+    stat $? 
 }
 
 CREATE_USER() {
