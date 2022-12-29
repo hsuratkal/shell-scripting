@@ -30,7 +30,7 @@ NODEJS() {
 
     NPM_INSTALL             # Calling NPM Install 
 
-    CONFIGURE_SVC           # Configuring and starting service 
+    CONFIGURE_SVC           # Configuring and starting service
 }
 
 CREATE_USER() {
@@ -68,7 +68,7 @@ NPM_INSTALL() {
 
 CONFIGURE_SVC() {
     echo -n "Configuring the $COMPONENT Service:"
-    sed -i -e 's/REDIS_ENDPOINT/redis.roboshop.internal/' -e 's/MONGO_ENDPOINT/mongo.roboshop.internal/' -e 's/MONGO_DNSNAME/mongodb.roboshop.internal/' /home/$APPUSER/$COMPONENT/systemd.service
+    sed -i -e  's/MONGO_DNSNAME/mongodb.roboshop.internal/' /home/$APPUSER/$COMPONENT/systemd.service
     mv /home/$APPUSER/$COMPONENT/systemd.service  /etc/systemd/system/$COMPONENT.service 
     stat $? 
 
