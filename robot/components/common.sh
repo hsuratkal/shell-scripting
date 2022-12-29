@@ -24,9 +24,9 @@ NODEJS() {
     yum install nodejs -y &>> "${LOFGILE}"
     stat $?  
 
-    CREATE_USER   # Calling Create_User function to create user account
+    CREATE_USER             # Calling Create_User function to create user account
 
-    DOWNLOAD_AND_EXTRACT
+    DOWNLOAD_AND_EXTRACT    # Calling Create_User function to create user account
 }
 
 CREATE_USER() {
