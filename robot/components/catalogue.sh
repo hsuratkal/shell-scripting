@@ -24,6 +24,6 @@ unzip -o /tmp/$COMPONENT.zip  &>> "${LOFGILE}"
 stat $? 
 
 echo -n "Changing the ownership to $APPUSER"
-mv 
+mv /home/$APPUSER/$COMPONENT-main /home/$APPUSER/$COMPONENT
 chown $APPUSER:$APPUSER /home/$APPUSER/$COMPONENT
 
