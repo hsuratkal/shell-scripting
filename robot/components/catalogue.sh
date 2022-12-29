@@ -47,7 +47,7 @@ echo -n "Starting $COMPONENT Service :"
 systemctl daemon-reload &>> "${LOFGILE}"
 systemctl enable $COMPONENTCOMPONENT &>> "${LOFGILE}"
 systemctl restart $COMPONENT &>> "${LOFGILE}" 
-systemctl status catalogue &>> "${LOFGILE}"
+systemctl status $COMPONENT &>> "${LOFGILE}"
 stat $? 
 
  echo -e "\e[32m ______ $COMPONENT Configuration Completed _________ \e[0m"
