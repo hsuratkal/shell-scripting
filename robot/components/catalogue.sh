@@ -25,6 +25,6 @@ stat $?
 
 echo -n "Changing the ownership to $APPUSER"
 mv /home/$APPUSER/$COMPONENT-main /home/$APPUSER/$COMPONENT
-chown $APPUSER:$APPUSER /home/$APPUSER/$COMPONENT
+chown -R $APPUSER:$APPUSER /home/$APPUSER/$COMPONENT
 stat $?
 
