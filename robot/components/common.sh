@@ -26,7 +26,7 @@ NODEJS() {
 
     CREATE_USER             # Calling Create_User function to create user account
 
-    DOWNLOAD_AND_EXTRACT    # Calling DOWNLOAD_AND_EXTRACT function to download
+    DOWNLOAD_AND_EXTRACT    # Calling DOWNLOAD_AND_EXTRACT function to download and extract the component 
 }
 
 CREATE_USER() {
