@@ -10,6 +10,7 @@ stat $?
 
 echo -n "Installing $COMPONENT : "
 yum install -y mongodb-org   &>> "${LOFGILE}"
+stat $?
 
 echo -n "whitelisting the mongodb"
 sed -i -e  's/127.0.0.1/0.0.0.0/' /etc/mongod.conf
