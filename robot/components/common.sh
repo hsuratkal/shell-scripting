@@ -57,4 +57,6 @@ DOWNLOAD_AND_EXTRACT() {
     stat $?
 }
 
-NPM_INSTALL() {}
+NPM_INSTALL() {
+    
+}
