@@ -8,20 +8,7 @@ NODEJS                         # Calling NodeJS Function
 
 
 
-echo -n "Downloading the $COMPONENT :" 
-curl -s -L -o /tmp/catalogue.zip "https://github.com/stans-robot-project/$COMPONENT/archive/main.zip"
-stat $? 
 
-echo -n "Cleanup and Extraction $COMPONENT: "
-rm -rf /home/$APPUSER/$COMPONENT/
-cd /home/$APPUSER
-unzip -o /tmp/$COMPONENT.zip  &>> "${LOFGILE}"
-stat $? 
-
-echo -n "Changing the ownership to $APPUSER"
-mv /home/$APPUSER/$COMPONENT-main /home/$APPUSER/$COMPONENT
-chown -R $APPUSER:$APPUSER /home/$APPUSER/$COMPONENT
-stat $?
 
 echo -n "Installing $COMPONENT Dependencies :"
 cd $COMPONENT 
