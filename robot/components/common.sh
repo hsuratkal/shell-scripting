@@ -65,3 +65,20 @@ NPM_INSTALL() {
     npm install  &>> "${LOFGILE}" 
     stat $?    
 }
+
+CONFIGURE_SVC() {
+    echo -n "Configuring the $COMPONENT Service:"
+    sed -i -e  's/MONGO_DNSNAME/mongodb.roboshop.internal/' /home/$APPUSER/$COMPONENT/systemd.service
+    mv /home/$APPUSER/$COMPONENT/systemd.service  /etc/systemd/system/$COMPONENT.service 
+    stat $? 
+
+    echo -n "Starting $COMPONENT Service :"
+    systemctl daemon-reload &>> "${LOFGILE}"
+    systemctl enable $COMPONENT &>> "${LOFGILE}"
+    systemctl restart $COMPONENT &>> "${LOFGILE}" 
+    systemctl status $COMPONENT &>> "${LOFGILE}"
+    stat $? 
+
+    echo -e "\e[32m ______ $COMPONENT Configuration Completed _________ \e[0m"
+
+}
