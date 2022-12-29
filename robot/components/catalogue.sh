@@ -17,6 +17,7 @@ stat $?
 
 echo -n "Extracting the $COMPONNET: "
 cd /home/$APPUSER
+unzip /tmp/catalogue.zip 
 
 
 
