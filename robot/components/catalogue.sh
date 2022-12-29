@@ -29,3 +29,4 @@ mv /home/$APPUSER/$COMPONENT-main /home/$APPUSER/$COMPONENT
 chown -R $APPUSER:$APPUSER /home/$APPUSER/$COMPONENT
 stat $?
 
+echo -n ""
