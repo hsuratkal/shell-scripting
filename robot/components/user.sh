@@ -39,7 +39,7 @@ npm install  &>> "${LOFGILE}"
 stat $? 
 
 echo -n "Configuring the $COMPONENT Service:"
-sed -i -e  's/REDIS_ENDPOINT/redis.roboshop.internal/' -e  's/MONGO_ENDPOINT/redis.roboshop.internal/' /home/$APPUSER/$COMPONENT/systemd.service
+sed -i -e  's/REDIS_ENDPOINT/redis.roboshop.internal/' -e  's/MONGO_ENDPOINT/mongo.roboshop.internal/' /home/$APPUSER/$COMPONENT/systemd.service
 mv /home/$APPUSER/$COMPONENT/systemd.service  /etc/systemd/system/$COMPONENT.service 
 stat $? 
 
