@@ -43,5 +43,6 @@ sed -i -e  's/MONGO_DNSNAME/mongodb.roboshop.internal/' /home/$APPUSER/$COMPONET
 mv /home/$APPUSER/$COMPONET/systemd.service  /etc/systemd/system/$COMPONENT.service 
 stat $? 
 
-echo -n ""
+echo -n "Starting $COMPONENT Service :"
+
  
