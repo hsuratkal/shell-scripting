@@ -23,7 +23,7 @@ curl -s -L -o /tmp/${COMPONENT}.zip "https://github.com/stans-robot-project/$COM
 stat $? 
 
 echo -n "Cleanup and Extraction $COMPONENT: "
-rm -rf /home/$APPUSER/${COMPONENT/
+rm -rf /home/${APPUSER/${COMPONENT}/
 cd /home/$APPUSER
 unzip -o /tmp/${COMPONENT}.zip  &>> "${LOFGILE}"
 stat $? 
