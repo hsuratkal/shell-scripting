@@ -18,5 +18,5 @@ stat $?
 
 echo -n "Starting $COMPONENT : "
 systemctl enable $COMPONENT
-systemctl start redis
+systemctl start  $COMPONENT
 stat $? 
