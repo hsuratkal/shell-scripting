@@ -7,3 +7,5 @@ catalogue:
 mongodb:
 	bash components/mongodb.sh
 
+redis:
+	bash components/mongodb.sh
