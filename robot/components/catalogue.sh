@@ -7,9 +7,10 @@ echo -n "Configuring Node JS:"
 curl -sL https://rpm.nodesource.com/setup_16.x | bash  &>> "${LOFGILE}"
 stat $? 
 
-echo -n "Creating Application User $APPUSER"
+echo -n "Creating Application User $APPUSER :"
 useradd $APPUSER  &>> "${LOFGILE}"
 stat $? 
 
 echo -n "Downloading the $COMPONENT :" 
+ curl -s -L -o /tmp/catalogue.zip "https://github.com/stans-robot-project/catalogue/archive/main.zip"
 
