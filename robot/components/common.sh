@@ -30,7 +30,7 @@ NODEJS() {
 
     NPM_INSTALL             # Calling NPM Install 
 
-    CONFIGURE_SVC      
+    CONFIGURE_SVC           # Configuring and starting service 
 }
 
 CREATE_USER() {
