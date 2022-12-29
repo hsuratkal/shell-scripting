@@ -23,5 +23,5 @@ cd /home/$APPUSER
 unzip -o /tmp/$COMPONENT.zip  &>> "${LOFGILE}"
 stat $? 
 
-
+echo -n 
 
