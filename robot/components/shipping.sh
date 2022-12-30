@@ -1,6 +1,6 @@
 #!/bin/bash 
 
-COMPONENT=cart
+COMPONENT=shipping
 source components/common.sh    # Source loads a file and this file has all the common patterns.
 
-NODEJS                         # Calling NodeJS Function
+JAVA                         # Calling NodeJS Function
