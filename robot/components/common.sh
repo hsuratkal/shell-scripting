@@ -24,7 +24,7 @@ JAVA() {
 
     DOWNLOAD_AND_EXTRACT
 
-    echo -n "Generating the artiface : "
+    echo -n "Generating the artifact : "
 
 }
 
