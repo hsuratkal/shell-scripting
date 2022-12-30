@@ -43,6 +43,8 @@ cd /tmp
 unzip -o $COMPONENT.zip  &>> "${LOFGILE}"
 stat $? 
 
+echo -n "Injecting the $ &>> "${LOFGILE}" Schema"
+
 
 # Once after login to MySQL prompt then run this SQL Command. This will uninstall the password validation feature like number of characters, password length, complexty and all. As I don’t want that I’d be uninstalling the `validate_password` plugin
 
