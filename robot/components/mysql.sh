@@ -29,6 +29,8 @@ if [ $? -ne 0 ]; then
     stat $?
 fi 
 
+
+echo ""
 echo -n "Uninstalling Password Validate Plugin "
 echo " uninstall plugin validate_password;"  | mysql -uroot -pRoboShop@1 &>> "${LOFGILE}"
 stat $?
