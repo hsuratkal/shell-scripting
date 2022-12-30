@@ -37,7 +37,8 @@ if [ $? -eq 0 ]; then
     stat $?
 fi 
 
-
+echo -n "Downloading the schema :"
+curl -s -L -o /tmp/mysql.zip "https://github.com/stans-robot-project/mysql/archive/main.zip" 
 
 # Once after login to MySQL prompt then run this SQL Command. This will uninstall the password validation feature like number of characters, password length, complexty and all. As I don’t want that I’d be uninstalling the `validate_password` plugin
 
