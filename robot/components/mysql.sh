@@ -21,7 +21,7 @@ echo -n "Fetching the default password :"
 DEFAULT_ROOT_PWD=$(grep 'A temporary password' /var/log/mysqld.log | awk '{print $NF}')
 
 
-echo 
+echo -n "Reset"
 
 
 
