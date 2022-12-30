@@ -22,7 +22,7 @@ DEFAULT_ROOT_PWD=$(grep 'A temporary password' /var/log/mysqld.log | awk '{print
 stat $? 
 
 # This should happen only if the default password is not changed, rest of the times, I don't want to change it.
-echo show databases | mysql -uroot -pRoboShop@1 
+echo show databases | mysql -uroot -pRoboShop@1 &>> "${LOFGILE}"
 
 echo -n "Resetting the default root password : "
 echo "ALTER USER 'root'@'localhost' IDENTIFIED BY 'RoboShop@1';" | mysql  --connect-expired-password -uroot -p${DEFAULT_ROOT_PWD} &>> "${LOFGILE}"
