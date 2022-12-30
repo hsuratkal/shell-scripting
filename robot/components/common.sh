@@ -16,7 +16,7 @@ stat() {
 }
 
 JAVA() {
-    
+    yum install maven -y  
 }
 
 NODEJS() {
