@@ -18,11 +18,6 @@ systemctl start mysqld
 stat $? 
 
 
-# 1. Install MySQL
-
-# ```bash
-# # yum install mysql-community-server -y
-# ```
 
 # 1. Start MySQL.
 
