@@ -16,7 +16,7 @@ stat() {
 }
 
 JAVA() {
-    echo -e "Installing Maven : "
+    echo -n  "Installing Maven : "
     yum install maven -y  &>> "${LOFGILE}"
     stat $? 
 
