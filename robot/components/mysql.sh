@@ -29,7 +29,6 @@ if [ $? -ne 0 ]; then
     stat $?
 fi 
 
-
 echo show plugins | mysql -uroot -pRoboShop@1 | grep validate_password;   &>> "${LOFGILE}"
 if [ $? -eq 0 ]; then 
     echo -n "Uninstalling Password Validate Plugin "
@@ -47,3 +46,5 @@ echo -n "Injecting the $COMPONENT Schema"
 cd $COMPONENT-main
 mysql -u root -pRoboShop@1 <shipping.sql
 stat $?
+
+echo -e "\e[32m ______ $COMPONENT Configuration Completed _________ \e[0m"
