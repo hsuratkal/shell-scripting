@@ -19,13 +19,6 @@ stat $?
 
 
 
-# 1. Start MySQL.
-
-# ```bash
-# # systemctl enable mysqld 
-# # systemctl start mysqld
-# ```
-
 # 1. Now a default root password will be generated and can be seen in the log file.
 
 # ```bash
