@@ -22,7 +22,7 @@ DEFAULT_ROOT_PWD=$(grep 'A temporary password' /var/log/mysqld.log | awk '{print
 
 
 echo -n "Resetting the default root password : "
-ALTER USER 'root'@'localhost' IDENTIFIED BY new_password;
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'RoboSop@1';
 
 
 # 1. Next, We need to change the default root password in order to start using the database service. Use password as `RoboShop@1` . Rest of the options you can choose `No`
