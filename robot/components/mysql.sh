@@ -12,6 +12,10 @@ echo -n "Installing $COMPONENT: "
 yum install mysql-community-server -y   &>> "${LOFGILE}"
 stat $? 
 
+echo -n "Starting $COMPONENT : "
+systemctl enable mongod
+systemctl start mongod
+stat $? 
 
 
 # 1. Install MySQL
