@@ -30,7 +30,7 @@ if [ $? -ne 0 ]; then
 fi 
 
 echo -n "Uninstalling Password Validate Plugin "
-echo " uninstall plugin validate_password;"  | 
+echo " uninstall plugin validate_password;"  | mysq
 # 1. Next, We need to change the default root password in order to start using the database service. Use password as `RoboShop@1` . Rest of the options you can choose `No`
 
 # ```bash
