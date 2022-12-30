@@ -17,6 +17,7 @@ systemctl enable mysqld
 systemctl start mysqld 
 stat $? 
 
+echo -n "Fetching the default password :" 
 
 
 # 1. Now a default root password will be generated and can be seen in the log file.
