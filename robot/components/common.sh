@@ -18,6 +18,7 @@ stat() {
 JAVA() {
     echo -e "Installing Maven : "
     yum install maven -y  
+    stat $? 
 }
 
 NODEJS() {
