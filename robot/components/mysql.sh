@@ -14,7 +14,7 @@ stat $?
 
 echo -n "Starting $COMPONENT : "
 systemctl enable mysqld
-systemctl start mongod
+systemctl start mysqld 
 stat $? 
 
 
