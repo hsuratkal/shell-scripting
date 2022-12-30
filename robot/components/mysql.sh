@@ -8,7 +8,7 @@ echo -n "Configuring the $COMPONENT repo  : "
 curl -s -L -o /etc/yum.repos.d/$COMPONENT.repo https://raw.githubusercontent.com/stans-robot-project/$COMPONENT/main/$COMPONENT.repo
 stat $? 
 
-
+echo -n "Installing $COMPONENT: "
 
 # MySQL is the database service that is needed for the application. So we need to install it and configure it for the application to work.
 
