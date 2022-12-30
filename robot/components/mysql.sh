@@ -35,6 +35,7 @@ if [ $? -eq 0 ]; then
 echo -n "Uninstalling Password Validate Plugin "
 echo " uninstall plugin validate_password;"  | mysql -uroot -pRoboShop@1 &>> "${LOFGILE}"
 stat $?
+fi 
 
 # 1. Next, We need to change the default root password in order to start using the database service. Use password as `RoboShop@1` . Rest of the options you can choose `No`
 
