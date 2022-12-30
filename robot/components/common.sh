@@ -27,7 +27,7 @@ JAVA() {
     echo -n "Generating the artifact : "
     cd /home/$APPUSER/$COMPONENT/
     mvn clean package &>> "${LOFGILE}"
-    mv target/$COMPONENT-1.0.jar shipping.jar
+    mv target/$COMPONENT-1.0.jar $COMPONENT.jar
 
     CONFIGURE_SVC           # Configuring and starting service
 
