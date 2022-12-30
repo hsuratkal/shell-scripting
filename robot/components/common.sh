@@ -19,6 +19,8 @@ JAVA() {
     echo -e "Installing Maven : "
     yum install maven -y  &>> "${LOFGILE}"
     stat $? 
+
+    
 }
 
 NODEJS() {
