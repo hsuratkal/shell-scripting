@@ -29,6 +29,8 @@ if [ $? -ne 0 ]; then
     stat $?
 fi 
 
+echo 
+
 # 1. Next, We need to change the default root password in order to start using the database service. Use password as `RoboShop@1` . Rest of the options you can choose `No`
 
 # ```bash
