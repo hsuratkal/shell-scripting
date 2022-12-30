@@ -24,6 +24,8 @@ JAVA() {
 
     DOWNLOAD_AND_EXTRACT
 
+    echo -n "Generating the artiface : "
+
 }
 
 NODEJS() {
