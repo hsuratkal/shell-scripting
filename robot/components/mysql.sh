@@ -13,7 +13,7 @@ yum install mysql-community-server -y   &>> "${LOFGILE}"
 stat $? 
 
 echo -n "Starting $COMPONENT : "
-systemctl enable mongod
+systemctl enable 
 systemctl start mongod
 stat $? 
 
