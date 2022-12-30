@@ -26,7 +26,8 @@ JAVA() {
 
     echo -n "Generating the artifact : "
     cd /home/$APPUSER/$COMPONENT/
-    mvn clean package 
+    mvn clean package &>> "${LOFGILE}"
+    
 
 }
 
