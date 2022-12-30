@@ -18,7 +18,7 @@ systemctl start mysqld
 stat $? 
 
 echo -n "Fetching the default password :" 
-
+grep 'A temporary password' /var/log/mysqld.log | awk '{print $NF}'
 
 # 1. Now a default root password will be generated and can be seen in the log file.
 
