@@ -9,6 +9,7 @@ curl -s -L -o /etc/yum.repos.d/$COMPONENT.repo https://raw.githubusercontent.com
 stat $? 
 
 
+
 # MySQL is the database service that is needed for the application. So we need to install it and configure it for the application to work.
 
 # ## **Manual Steps to Install MySQL**
