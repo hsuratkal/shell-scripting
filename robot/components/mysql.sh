@@ -10,6 +10,8 @@ stat $?
 
 echo -n "Installing $COMPONENT: "
 yum install mysql-community-server -y   &>> "${LOFGILE}"
+stat $? 
+
 
 
 # 1. Install MySQL
