@@ -18,3 +18,6 @@ cart:
 
 mysql:
 	bash components/mysql.sh
+
+mysql:
+	bash components/mysql.sh
