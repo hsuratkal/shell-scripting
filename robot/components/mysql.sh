@@ -23,6 +23,7 @@ stat $?
 
 echo -n "Resetting the default root password : "
 echo "ALTER USER 'root'@'localhost' IDENTIFIED BY 'RoboShop@1';" | mysql  -uroot -p${DEFAULT_ROOT_PWD}
+stat $?
 
 
 # 1. Next, We need to change the default root password in order to start using the database service. Use password as `RoboShop@1` . Rest of the options you can choose `No`
