@@ -23,12 +23,12 @@ stat $?
 
 # This should happen only if the default password is not changed, rest of the times, I don't want to change it.
 echo show databases | mysql -uroot -pRoboShop@1 &>> "${LOFGILE}"
-if [ $? -ne 0 ]
+if [ $? -ne 0 ]; then 
 
-echo -n "Resetting the default root password : "
-echo "ALTER USER 'root'@'localhost' IDENTIFIED BY 'RoboShop@1';" | mysql  --connect-expired-password -uroot -p${DEFAULT_ROOT_PWD} &>> "${LOFGILE}"
-stat $?
-
+    echo -n "Resetting the default root password : "
+    echo "ALTER USER 'root'@'localhost' IDENTIFIED BY 'RoboShop@1';" | mysql  --connect-expired-password -uroot -p${DEFAULT_ROOT_PWD} &>> "${LOFGILE}"
+    stat $?
+fi 
 
 # 1. Next, We need to change the default root password in order to start using the database service. Use password as `RoboShop@1` . Rest of the options you can choose `No`
 
