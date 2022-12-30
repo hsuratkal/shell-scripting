@@ -31,7 +31,7 @@ fi
 
 
 echo "show plugins | mysql -uroot -pRoboShop@1 | grep validate_password;   &>> "${LOFGILE}"
-
+if [ $? -eq 0 ]; then 
 echo -n "Uninstalling Password Validate Plugin "
 echo " uninstall plugin validate_password;"  | mysql -uroot -pRoboShop@1 &>> "${LOFGILE}"
 stat $?
