@@ -10,17 +10,7 @@ stat $?
 
 echo -n "Installing $COMPONENT: "
 
-# MySQL is the database service that is needed for the application. So we need to install it and configure it for the application to work.
 
-# ## **Manual Steps to Install MySQL**
-
-# As per the Application need, we are choosing MySQL 5.7 version.
-
-# 1. Setup MySQL Repo
-
-# ```bash
-# # curl -s -L -o /etc/yum.repos.d/mysql.repo https://raw.githubusercontent.com/stans-robot-project/mysql/main/mysql.repo
-# ```
 
 # 1. Install MySQL
 
