@@ -44,6 +44,7 @@ unzip -o $COMPONENT.zip  &>> "${LOFGILE}"
 stat $? 
 
 echo -n "Injecting the $COMPONENT Schema"
+cd $COMPONENT-main
 
 
 
