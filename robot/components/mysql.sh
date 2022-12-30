@@ -46,3 +46,4 @@ stat $?
 echo -n "Injecting the $COMPONENT Schema"
 cd $COMPONENT-main
 mysql -u root -pRoboShop@1 <shipping.sql
+stat $?
