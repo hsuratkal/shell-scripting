@@ -45,23 +45,4 @@ stat $?
 
 echo -n "Injecting the $COMPONENT Schema"
 cd $COMPONENT-main
-
-
-
-# Once after login to MySQL prompt then run this SQL Command. This will uninstall the password validation feature like number of characters, password length, complexty and all. As I don’t want that I’d be uninstalling the `validate_password` plugin
-
-# ## **Setup Needed for Application.**
-
-# As per the architecture diagram, MySQL is needed by
-
-# - Shipping Service
-
-# So we need to load that schema into the database, So those applications will detect them and run accordingly.
-
-# To download schema, Use the following command
-
-# ```bash
-# # curl -s -L -o /tmp/mysql.zip "https://github.com/stans-robot-project/mysql/archive/main.zip"
-# ```
-
-# Load the schema for mysql. This file contains the list of COUNTRIES, CITIES and their PINCODES. This will be helpful in doing the shipping charges calculation which is based on the distance the product is shippied
+mysql -u root -pRoboShop@1 <shipping.sql
