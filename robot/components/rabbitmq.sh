@@ -4,28 +4,28 @@ COMPONENT=rabbitmq
 source components/common.sh
 
 echo -n "Installing and configuring $COMPONENT repo"
-curl -s https://packagecloud.io/install/repositories/rabbitmq/erlang/script.rpm.sh | sudo bash  &>> $LOGFILE 
-curl -s https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/script.rpm.sh | sudo bash  &>> $LOGFILE 
+curl -s https://packagecloud.io/install/repositories/rabbitmq/erlang/script.rpm.sh | sudo bash  &>> "${LOFGILE}"
+curl -s https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/script.rpm.sh | sudo bash &>> "${LOFGILE}"
 stat $? 
 
 echo -n "Installing $COMPONENT : "
-yum install rabbitmq-server -y &>> $LOGFILE 
+yum install rabbitmq-server -y &>> "${LOFGILE}"
 stat $?
 
 echo -n "Starting $COMPONENT :"
-systemctl enable rabbitmq-server  &>> $LOGFILE 
-systemctl start rabbitmq-server  &>> $LOGFILE 
+systemctl enable rabbitmq-server &>> "${LOFGILE}"
+systemctl start rabbitmq-server  &>> "${LOFGILE}"
 stat $? 
 
     echo -n "Creating Applicaiton user on $COMPONENT: "
-    rabbitmqctl add_user roboshop cd &>> $LOGFILE 
+    rabbitmqctl add_user roboshop cd &>> "${LOFGILE}"
     stat $? 
 
 
 
 echo -n "Adding Permissions to $APPUSER :"
-rabbitmqctl set_user_tags roboshop administrator &>> $LOGFILE 
-rabbitmqctl set_permissions -p / roboshop ".*" ".*" ".*" &>> $LOGFILE 
+rabbitmqctl set_user_tags roboshop administrator &>> "${LOFGILE}"
+rabbitmqctl set_permissions -p / roboshop ".*" ".*" ".*"&>> "${LOFGILE}"
 stat $?
 
 
