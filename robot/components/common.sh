@@ -22,7 +22,17 @@ PYTHON() {
 
     CREATE_USER             # Calling Create_User function to create user account
 
-    DOWNLOAD_AND_EXTRACT
+    DOWNLOAD_AND_EXTRACT 
+
+    cd /home/$APPUSER/$COMPONENT/ 
+    pip3 install -r requirements.txt &>> "${LOFGILE}" 
+    stat $?  
+
+    USERID=$(id -u roboshop)
+    GROUPID=$(id -g roboshop)
+
+    echo -n "Updating the UID and GID in the $COMPONENT.ini file : "
+    sed -i 
 
 }
 
@@ -41,10 +51,6 @@ JAVA() {
     mv target/$COMPONENT-1.0.jar $COMPONENT.jar
 
     CONFIGURE_SVC           # Configuring and starting service
-
-    cd /home/$APPUSER/$COMPONENT/ 
-    pip3 install -r requirements.txt &>> "${LOFGILE}" 
-    stat $?  
 
 }
 
