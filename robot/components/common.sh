@@ -15,6 +15,17 @@ stat() {
     fi 
 }
 
+PYTHON() {
+   echo -n "Installing python3 and other dependencies : "
+   yum install python36 gcc python3-devel -y  &>> "${LOFGILE}" 
+   stat $? 
+
+    CREATE_USER             # Calling Create_User function to create user account
+
+    DOWNLOAD_AND_EXTRACT
+
+}
+
 JAVA() {
     echo -n  "Installing Maven : "
     yum install maven -y  &>> "${LOFGILE}"
@@ -30,6 +41,10 @@ JAVA() {
     mv target/$COMPONENT-1.0.jar $COMPONENT.jar
 
     CONFIGURE_SVC           # Configuring and starting service
+
+    cd /home/$APPUSER/$COMPONENT/ 
+    pip3 install -r requirements.txt &>> "${LOFGILE}" 
+    stat $?  
 
 }
 
