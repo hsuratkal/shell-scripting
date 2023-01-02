@@ -25,6 +25,11 @@ Follwoing are the shell scripting topics which we discuss as a part of our proje
 
 ```
 
+^ : Start 
+$ : End of the line 
+grep ^devops    : Looking for the lines that are starting with devops
+grep devops$    : Looking for the lines that are ending with devops
+
 
 
 
