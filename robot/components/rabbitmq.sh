@@ -17,7 +17,7 @@ systemctl enable rabbitmq-server &>> "${LOFGILE}"
 systemctl start rabbitmq-server  &>> "${LOFGILE}"
 stat $? 
 
-sudo rabbitmqctl list_users | grep &>> "${LOFGILE}" 
+sudo rabbitmqctl list_users | grep "${APPUSER}" &>> "${LOFGILE}" 
 if [ $? -ne 0 ]; then 
     echo -n "Creating Applicaiton user on $COMPONENT: "
     rabbitmqctl add_user roboshop cd &>> "${LOFGILE}"
