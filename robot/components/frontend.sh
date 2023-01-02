@@ -31,8 +31,8 @@ stat $?
 
 for component in catalogue cart user shipping payment; do     # for loop 
     echo -n "Updating the backend reverse proxy dns records:"
-    sed -i -e "/$component/s/localhost/$componet.roboshop.internal"  /etc/nginx/default.d/roboshop.conf  
-    stat  
+    sed -i -e "/$component/s/localhost/$component.roboshop.internal"  /etc/nginx/default.d/roboshop.conf  
+    stat $? 
 done 
 
 echo -n "Retarting Nignx :"
