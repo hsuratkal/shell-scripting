@@ -17,10 +17,12 @@ systemctl enable rabbitmq-server &>> "${LOFGILE}"
 systemctl start rabbitmq-server  &>> "${LOFGILE}"
 stat $? 
 
+sudo rabbitmqctl list_users | grep &>> "${LOFGILE}" 
+if [ $? -ne 0 ]; then 
     echo -n "Creating Applicaiton user on $COMPONENT: "
     rabbitmqctl add_user roboshop cd &>> "${LOFGILE}"
     stat $? 
-
+fi 
 
 
 echo -n "Adding Permissions to $APPUSER :"
