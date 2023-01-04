@@ -5,7 +5,7 @@ echo -n "--- Harish's Frontend ---"
 COMPONENT=frontend
 source components/common.sh    # Source loads a file and this file has all the common patterns.
 
-echo -e "\e[32m ______ $COMPONENT Configuration is Starting  _________ \e[0m"
+echo -n -e "\e[32m ______ $COMPONENT Configuration is Starting  _________ \e[0m"
 
 echo -n "Installing Nginx : "
 yum install nginx -y     &>> "${LOFGILE}"
