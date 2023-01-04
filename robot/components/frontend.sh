@@ -31,11 +31,11 @@ rm -rf frontend-main README.md  &>> /tmp/frontend.log
 mv localhost.conf /etc/nginx/default.d/roboshop.conf   &>> "${LOFGILE}"
 stat $? 
 
-for component in catalogue cart user shipping payment; do     # for loop 
-    echo -n "Updating the $component backend reverse proxy dns records:"
-    sed -i -e "/$component/s/localhost/$component.roboshop.internal/"  /etc/nginx/default.d/roboshop.conf  
-    stat $? 
-done 
+#for component in catalogue cart user shipping payment; do     # for loop 
+#    echo -n "Updating the $component backend reverse proxy dns records:"
+#    sed -i -e "/$component/s/localhost/$component.roboshop.internal/"  /etc/nginx/default.d/roboshop.conf  
+#    stat $? 
+#done 
 
 echo -n "Retarting Nignx :"
 systemctl enable nginx    &>> "${LOFGILE}"
