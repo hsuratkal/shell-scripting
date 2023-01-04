@@ -1,6 +1,6 @@
 #!/bin/bash 
 
-echo -n "--- Harish's Frontend ---"
+echo -n "--- Harish's Frontend 1 ---"
 
 COMPONENT=frontend
 source components/common.sh    # Source loads a file and this file has all the common patterns.
